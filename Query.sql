@@ -54,3 +54,56 @@ rollback;
 
 
 
+
+select * from student order by age asc;
+
+select * from student order by id desc;
+
+select * from student where password like '%pass%' order by id asc;
+
+select * from student order by firstName asc,
+                               age asc;
+
+select * from profesor;
+
+select * from profesor limit 4;
+
+select * from profesor limit 1 offset 3;
+select * from profesor limit 3,1;
+select * from student limit 4,1;
+
+select upper (firstName) from student;
+select upper('Andrei');
+
+select concat(1,2,3,4);
+select concat(firstName,age,email) from profesor;
+
+select length(password) from student;
+select length(password) from student limit 2 offset 3;
+select length(password) from student limit 3, 2;
+
+select lower(firstName) from profesor;
+select lower('ANA');
+
+select substr('test@gmail' ,5, 6);
+
+select replace('Elena', firstName, 'X') from student;
+select * from student;
+
+select count(*) from profesor;
+select count(*) from user;
+
+select count(distinct profesorId) from curs;
+
+select sum(age) from student;
+
+select sum(age) as sumaAni from profesor;
+select avg(age) from profesor;
+select max(age) from profesor;
+
+
+
+
+
+
+
