@@ -1,0 +1,43 @@
+select * from student;
+select * from user;
+select * from enrollment;
+select * from profesor;
+select * from curs;
+
+select email from user;
+select firstName from user;
+select department from curs;
+select age from user;
+
+select firstName, lastName from user;
+select email, age from student;
+
+select firstName as prenume, lastName as "Nume de familie" from user;
+select age as varsta, password as "Parola" from student;
+
+select * from student where age < 20;
+select firstName, lastName from user where password = 'parola1';
+select email from user where firstName = 'Ana';
+select firstName as cursant from profesor where nrOreSaptamana>10;
+
+select * from curs where department <> 'Matematica';
+select profesorId as codProfesor from curs where department != 'Informatica';
+
+select * from student where age <= 20;
+select * from student where age > 20;
+
+select name as curs from curs where department = 'Fizica' or department = 'Chimie';
+
+select email from user where id in (1,3);
+
+select email from student where id not in (1,3,5);
+
+select * from student where age between 19 and 21;
+
+select * from student where password like '%pass%';
+
+
+
+
+
+
