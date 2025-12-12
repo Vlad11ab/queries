@@ -39,5 +39,18 @@ select * from student where password like '%pass%';
 
 
 
+insert into profesor values (6, 'Danila', 'Iulian', 'danila@gmail.com', 35, 'parolaParola', 24);
+
+update user set age = 20;
+
+update user set age = 19 where id = 1;
+select * from user;
+update user set age = 24 where id =3;
+
+delete from profesor where id = 6;
+
+begin;
+rollback;
+
 
 
