@@ -1,3 +1,37 @@
+create table student_id_card(
+    id integer unique not null primary key,
+    studentId integer not null,
+    cardNumber integer unique not null,
+
+    foreign key (studentId) references student(id)
+);
+
+create table book (
+    id integer unique not null primary key,
+    studentId integer not null,
+    bookName varchar(255) null,
+
+    foreign key (studentId) references student(id)
+);
+
+insert into book (id, bookName, studentId) values
+        (1, 'clean code',  1),
+        (2, 'spring boot',  1),
+        (3, 'think like a programmer',  2),
+        (4, 'effective java', 3),
+        (5, 'java concurrency', 3),
+        (6, 'introduction to algorithms', 5),
+        (7, 'postgresql up and running', 6);
+
+insert into student_id_card (id, cardNumber, studentId) values
+            (1, '1234567890', 1),
+            (2, '0987654321', 2),
+            (3, '1000000003', 3),
+            (4, '1000000004', 4),
+            (5, '1000000005', 5),
+            (6, '1000000006', 6);
+
+
 select * from student;
 select * from user;
 select * from enrollment;
